@@ -1,0 +1,38 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>dob</th>
+                <th>address</th>
+                <th>email</th>
+                <th>mobile</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let group of studentdetails">
+                <td>{{group.firstname}}</td>
+            
+                <td>{{group.lastname}}</td>
+           
+                <td>{{group.dob}}</td>
+            
+                <td>{{group.address}}</td>
+            
+                <td>{{group.email}}</td>
+            
+                <td>{{group.mobile}}</td>
+                <td>
+                    <button (click)="edit(group)">edit</button>
+                </td>
+                <td>
+                <button (click)="deleteMsg(group)"> delete</button>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

@@ -1,0 +1,63 @@
+<form>
+
+        <h2>Registration Form</h2>
+        <div class="form-group">
+
+                <label>ID</label>
+               <input type="number" [(ngModel)]="Studentobject.id" [ngModelOptions]="{standalone: true}">
+
+        </div>
+
+        <div class="form-group">
+                <label>First Name</label>
+                <div class="col-sm-10">
+                        <input type="text" class="form-control" [(ngModel)]="Studentobject.firstname"
+                                [ngModelOptions]="{standalone: true}" placeholder="First Name">
+                </div>
+        </div>
+        <div class="form-group">
+                <label>Last Name</label>
+                <div class="col-sm-10">
+                        <input type="text" class="form-control" [(ngModel)]="Studentobject.lastname"
+                                [ngModelOptions]="{standalone: true}" placeholder="Last Name">
+                </div>
+        </div>
+        <div class="form-group">
+                <label>Date of Birth</label>
+                <div class="col-sm-10">
+                        <input type="date" class="form-control" [(ngModel)]="Studentobject.dob"
+                                [ngModelOptions]="{standalone: true}" placeholder="DateofBirth">
+                </div>
+        </div>
+
+        <div class="form-group">
+                <label>Address</label>
+                <div class="col-sm-10">
+                        <input type="text" class="form-control" [(ngModel)]="Studentobject.address"
+                                [ngModelOptions]="{standalone: true}" placeholder="Address">
+                </div>
+        </div>
+        <div class="form-group">
+                <label>Email address</label>
+                <div class="col-sm-10">
+                        <input type="email" class="form-control" [(ngModel)]="Studentobject.email"
+                                [ngModelOptions]="{standalone: true}" placeholder="Enter email">
+                </div>
+        </div>
+
+
+        <div class="form-group">
+                <label>Mobile Number </label>
+                <div class="col-sm-10">
+                        <input type="number" class="form-control" [(ngModel)]="Studentobject.mobile"
+                                [ngModelOptions]="{standalone: true}" placeholder="mobile number">
+                </div>
+        </div>
+
+
+
+</form>
+<button (click)="submit(Studentobject)" class="btn btn-primary">Submit</button>
+
+<button [routerLink]="'/bala'">view</button>
+<button (click)="update(Studentobject)">update</button>
